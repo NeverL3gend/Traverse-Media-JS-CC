@@ -1,0 +1,16 @@
+Traverse Media Crash Course Notes
+
+-> What I wil learn during this Tutorial <-
+
+    - Variables and Data Types
+    - Arrays
+    - Object Literals
+    - Methods for strings, arrays, objects, etc
+    - Loops - for, while, for...of, forEach, map
+    - Conditionals (if, ternary and switch)
+    - Fucntions (normal and arrow)
+    - OOP (prototypes and classes)
+    - DOM Selection
+    - DOM Manipulation
+    - Events 
+    - Basic Form Validation
