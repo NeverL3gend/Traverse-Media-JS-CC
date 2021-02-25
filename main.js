@@ -78,7 +78,7 @@
 
 
 //Object Literals is just key value pairs
-
+//importantt object notes
 const person = {
     firstName: 'alex',
     lastName: 'garcia',
