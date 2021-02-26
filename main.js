@@ -79,26 +79,269 @@
 
 //Object Literals is just key value pairs
 //importantt object notes
-const person = {
-    firstName: 'alex',
-    lastName: 'garcia',
-    age: 25,
-    hobbies: ['music', 'gaming', 'driving'],
-    address: { //you can make an object within an object
-        street: '22 elm street',
-        city: 'boston',
-        state: 'ma'
-    }
+// const person = {
+//     firstName: 'alex',
+//     lastName: 'garcia',
+//     age: 25,
+//     hobbies: ['music', 'gaming', 'driving'],
+//     address: { //you can make an object within an object
+//         street: '22 elm street',
+//         city: 'boston',
+//         state: 'ma'
+//     }
 
-}
+// }
 
-console.log(person);
-//to access a single value you use a dot notation by doing the following
-console.log(person.firstName, person.lastName);
-//If you want to select a specific an array in the hobbies key you need to do the following
-console.log(person.hobbies[1]);
-//If you want to access city in the address key you need to do the following
-console.log(person.address.city);
+// console.log(person);
+// //to access a single value you use a dot notation by doing the following
+// console.log(person.firstName, person.lastName);
+// //If you want to select a specific an array in the hobbies key you need to do the following
+// console.log(person.hobbies[1]);
+// //If you want to access city in the address key you need to do the following
+// console.log(person.address.city);
+// //add properties
+// person.email = 'agarcia@mail.com'
+// //Array of objects
+// const todos = [
+//     {id:1,
+//     text: 'take out trash',
+//     isCompleted: true
+// },
+// {id:2,
+//     text: 'meeting with boss',
+//     isCompleted: true
+// },
+// {id:3,
+//     text: 'taking a shower',
+//     isCompleted: false
+// },
+// ]
+
+// console.log(todos[1].text);
+
+// const todoJSON = JSON.stringify(todos)
+// console.log(todoJSON);
 
 
-//Stopped at 32:52 in the video  https://www.youtube.com/watch?v=hdI2bqOjy3c&t=1s
+//For Loops
+
+// for(let i = 0; i <= 10; i++){
+//     console.log(`for loop number: ${i}`);
+// }
+
+
+
+//While Loops
+
+// let i = 0;
+
+// while (i < 10) {
+//     console.log(`While loop number: ${i}`);
+//     i++
+// }
+
+//Iterrate through an Array:
+// for(let i = 0; i < todos.length; i++){
+//     console.log(todos[i].text);
+// }
+
+// for(let todo of todos){
+//     console.log(todo);
+// }
+
+
+//High order Array Methods, forEach, map, Filter
+
+
+// todos.forEach(function(todo){
+//     console.log(todo.text);
+// })
+// //map returns an array
+// const todoText = todos.map(function(todo){
+//     return todo.text
+// })
+
+
+//filter
+// const todoCompleted = todos.filter(function(todo){
+//     return todo.isCompleted === true
+// }).map(function (todo){
+//     return todo.text
+// })
+
+
+// console.log(todoCompleted);
+
+
+//Conditionals
+
+// const x = 4;
+// const y = 11;
+// //double equal will not match the data types. It will match the value
+// //TRiple equal will only match the data type
+// if( x > 5 || y > 10) {
+//     console.log('x is more than 5 or y is more than 10');
+// } 
+
+
+//ternary operator
+// const  x = 10
+// //? then 
+// //: elese 
+// const color = x > 10 ? 'red' : 'blue'
+
+// switch(color) {
+//     case 'red':
+//         console.log('color is red');
+//         break
+//     case 'blue':
+//         console.log('color is blue');
+//         break
+//     default: 
+//         console.log('color is NOT red or blue');
+//         break
+// }
+
+
+//functions
+
+// function addNums (num1, num2) {
+//     return num1 + num2
+// }
+
+// console.log(addNums(5,5));
+
+
+
+//Object Oriented Programming
+
+//constructor function
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+// }
+
+
+// Person.prototype.getBirthYear = function () {
+    
+// }
+
+// Person.prototype.getFullName = function () {
+//     return `${this.firstName} ${this.lastName}`
+// }
+
+//class
+
+// class person {
+//     constructor(firstName, lastName, dob) {//method
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob);
+// }
+//     getBirthYear() {
+//     return this.dob.getFullYear();
+//   }
+
+//   getFullName () {
+//     return `${this.firstName} ${this.lastName}`
+//   }
+// }
+// //Instantiate Object
+// const person1 = new person('John', 'Doe', '4-3-1980');
+// const person2 = new person('alex', 'garcia', '6-6-1995');
+
+
+
+//DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
