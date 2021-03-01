@@ -253,12 +253,78 @@
 
 
 
-//DOM //tomorrow
+//DOM 
+
+//window is an object. Its a parent object to the browser 
+// console.log(window);
+/*
+Selectors:
+> Single
+> Element
+> Multiple Element
+*/
 
 
+// To get a single element.
+// console.log(document.getElementById('my-form'))
+// //Query selector
+// console.log(document.querySelector('.container'));
+
+//Multiple Element
+// console.log(document.querySelectorAll('.item')); //This will give us a node list kinda like an array
+// console.log(document.getoElementTagName(''))
 
 
+//This is looping through each item in the array
+// const items = document.querySelectorAll('.item');
+// items.forEach((item) => console.log(item))
 
+//change things on the DOM
+
+// const ul = document.querySelector('.items')
+// // ul.remove()//removes elements
+// // ul.lastElementChild.remove() //removes the last element child
+// ul.firstElementChild.textContent = 'hello' //changes from item to hello
+// ul.children[1].innerText = 'brad'
+// ul.lastElementChild.innerHTML = '<h4> hello <h4>'
+
+
+// const btn = document.querySelector('.btn')
+// // btn.style.background = 'red'
+
+// //Event listener
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault() //will prevent the click from defaulting
+//     document.querySelector('#my-form').style.background = 'yellow'
+//     document.querySelector('body').classList.add('bg-dark')
+//     document.querySelector('.items').lastElementChild.innerHTML = '<h1> hello</h1>'
+// })
+
+
+const myForm = document.querySelector('#my-form')
+const nameInput = document.querySelector('#name')
+const emailInput = document.querySelector('#email')
+const msg = document.querySelector('.msg')
+const userList = document.querySelector('#user')
+
+myForm.addEventListener('submit',onSubmit);
+
+function onSubmit (e){
+    e.preventDefault()
+
+    if(nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error')
+        msg.innerHTML = 'please complete form'
+        setTimeout(() => msg.remove(), 3000)
+    } else {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`))
+        userList.appendChild(li);
+        //clear the fields
+        nameInput.value = ' '
+        emailInput.value = ''
+    }
+}
 
 
 
